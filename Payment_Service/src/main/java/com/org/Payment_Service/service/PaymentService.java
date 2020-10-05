@@ -27,4 +27,9 @@ public class PaymentService {
 	public String paymentProcessing() {
 		return new Random().nextBoolean()?"Success":"false";
 	}
+
+	public Payment findPaymentById(int orderId) {
+		// TODO Auto-generated method stub
+		return paymentRepository.findByOrderId(orderId);
+	}
 }
